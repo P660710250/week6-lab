@@ -42,7 +42,7 @@ func main() {
 	mux.HandleFunc("GET /api/movies", h.SearchMovies)
 	mux.HandleFunc("GET /api/movies/{id}", h.GetMovie)
 	mux.HandleFunc("GET /api/movies/{id}/reviews", h.ListReviews)
-    mux.HandleFunc("DELETE /api/reviews/{id}", h.DeleteReview)
+    
 
 	origins := strings.Split(os.Getenv("ALLOWED_ORIGINS"), ",")
 	log.Println("MovieHub API ฟังอยู่ที่ :8080 ต้อนรับ", origins)
